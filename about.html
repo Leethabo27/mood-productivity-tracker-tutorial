@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mpendulo • Daily Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/1d2s4Xn0rBjgZqvA0L8N5q8f8q2dZxqWw7Qy7W9E0n3E4oP3pS6KpC3xH3X0jz8I7S8v7o4uA0bI4i9N0N+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.svg" alt="Mpendulo Logo" />
+       
+      </div>
+      <nav>
+        <button aria-label="Toggle menu" class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="about.html" aria-current="page"><i class="fa-solid fa-user"></i> About</a>
+          <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+          <button class="theme-toggle" id="themeBtn" title="Toggle light/dark">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>About This Project</h2>
+      <p>This project is a simple, responsive dashboard showcasing HTML, CSS, JavaScript, APIs, modules, localStorage, and Chart.js.</p>
+      <ul>
+        <li>Live date & time (local timezone)</li>
+        <li>Responsive navigation with a mobile toggle</li>
+        <li>Theme switch (light/dark)</li>
+        <li>Animated gradient background + dynamic images</li>
+        <li>Quotes API integration</li>
+        <li>Notes saved to localStorage</li>
+        <li>Mood tracker + Chart.js visualization</li>
+      </ul>
+      <p>Built to be user-friendly on all devices.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Mpendulo · Coded by Mpendulo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>

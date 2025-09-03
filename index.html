@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mpendulo • Daily Dashboard TUTORING sECTION</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chart.js (global script for Chart object) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.svg" alt="Mpendulo Logo" />
+       
+      </div>
+      <nav>
+        <button aria-label="Toggle menu" class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+          <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+          <button class="theme-toggle" id="themeBtn" title="Toggle light/dark">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="card">
+        <h2><i class="fa-regular fa-clock"></i> Live Date & Time</h2>
+        <div id="time" class="time">--:--:--</div>
+        <div id="date" class="sub">Loading date…</div>
+        <div class="controls">
+          <button class="btn" id="bgBtn"><i class="fa-solid fa-image"></i> Change Background</button>
+          <button class="btn" id="quoteBtn"><i class="fa-solid fa-quote-left"></i> New Quote</button>
+        </div>
+        <blockquote id="quote" class="sub">Fetching a motivational quote…</blockquote>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-pen-to-square"></i> Notes (Saved on your device)</h2>
+        <textarea id="notes" class="note-area" placeholder="Type your notes here…"></textarea>
+        <div class="controls">
+          <button class="btn" id="saveNotes"><i class="fa-solid fa-floppy-disk"></i> Save Notes</button>
+          <button class="btn" id="clearNotes"><i class="fa-solid fa-trash"></i> Clear</button>
+        </div>
+        <p class="sub">Your notes use localStorage and stay on this browser.</p>
+      </div>
+    </section>
+
+    <!-- Grid Section -->
+    <section class="grid">
+      <div class="card">
+        <h2><i class="fa-solid fa-face-smile"></i> Mood Tracker</h2>
+        <div class="controls">
+          <select id="moodSelect" aria-label="Select mood">
+            <option value="Happy">Happy</option>
+            <option value="Calm">Calm</option>
+            <option value="Focused">Focused</option>
+            <option value="Tired">Tired</option>
+            <option value="Stressed">Stressed</option>
+          </select>
+          <button class="btn" id="addMood"><i class="fa-solid fa-plus"></i> Add</button>
+          <button class="btn" id="clearMood"><i class="fa-solid fa-broom"></i> Reset</button>
+        </div>
+        <div class="list" id="moodList"></div>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-chart-column"></i> Mood Chart</h2>
+        <canvas id="moodChart" width="400" height="260" aria-label="Mood chart"></canvas>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-sparkles"></i> Tips</h2>
+        <ul class="sub">
+          <li>Use the theme button for light/dark.</li>
+          <li>Save notes; they persist on this device.</li>
+          <li>Tap “New Quote” for fresh motivation.</li>
+          <li>Add moods to see your weekly stats.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Lethabo · Coded by Lethabo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Your JS modules (all in the same folder) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
